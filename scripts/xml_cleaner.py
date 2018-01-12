@@ -3,8 +3,13 @@ Script will take a list of xml files (downloaded from USPTO bulk data storage si
 and clean unwanted <!DOCTYPE...> and extra <?xml...?> lines from the file.
 '''
 import re
+import glob
 
-file_names = ['test1.xml','ipgb20171226.xml']
+# use glob to get all names of xml files in the /raw_data directory
+glob_results = glob.glob('../raw_data/*')
+file_names = []
+for name in glob_results:
+    file_names.append(name[12:])
 
 def patent_xml_cleaner(file_list):
     doctype_pattern = re.compile('^<!DOCTYPE.*>$')
