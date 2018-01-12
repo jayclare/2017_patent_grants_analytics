@@ -1,3 +1,6 @@
+# large data files
 raw_data/
 clean_data/
+
+# Jupyter Notebook
 .ipynb_checkpoints
