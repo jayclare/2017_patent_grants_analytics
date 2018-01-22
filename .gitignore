@@ -4,3 +4,6 @@ clean_data/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
+
+# change log
+.DS_Store
